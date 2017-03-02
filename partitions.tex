@@ -1,6 +1,15 @@
 \begin{block}{Partitions interactives}
 \begin{figure}
-\includegraphics[width=\columnwidth]{images/score.eps}
+    \begin{tikzpicture}[scale=4, every node/.style={scale=0.8}]
+\input{scores/example.tex}
+
+\draw (2.1, 21.5199) node {Durée fixe};
+\draw (4.104, 21.1099) node {Durée souple};
+\draw (2.201509, 20.7) node {Branches conditionnées};
+\draw (1.301509, 20) node {Contenu};
+\draw (1.301509, 18.6295) node {Contenu};
+\draw (5, 21.4099) node {Interaction};
+\end{tikzpicture}
 \caption{Syntaxe d'une partition interactive}
 \end{figure}
 Possibilités d'écritures forment un langage de programmation structuré axé sur l'organisation temporelle. 
