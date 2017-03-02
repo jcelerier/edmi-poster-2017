@@ -8,13 +8,21 @@
 \usepackage{graphicx}
 \usepackage{pstricks}
 \usepackage{tikz}
-\usepackage[french]{babel}
+\usepackage{polyglossia}
+\setdefaultlanguage{french} 
+\usepackage{diagbox}
+\usepackage{xspace}
 \usepackage{microtype}
 \usepackage{default}
 \usepackage{listings}
+\usepackage{booktabs}
 \usepackage[backend=biber]{biblatex}
 \addbibresource{document.bib}
 \renewcommand*{\bibfont}{\footnotesize}
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}   %% centered
+\newcolumntype{R}[1]{>{\raggedright\arraybackslash}m{#1}}  %% right aligned
+\newcolumntype{L}[1]{>{\raggedleft\arraybackslash}m{#1}}  %% right aligned
 
 
 %-----------------------------------------------------------
@@ -84,26 +92,13 @@
     \end{column}
 
     \begin{column}{\sepwid}\end{column}
-    \begin{column}{\twocolwid}
-      \begin{columns}[t,totalwidth=\twocolwid]
-        \begin{column}{\onecolwid}\vspace{-.67in}
-            \vskip2ex
-            \input{entites}
-        \end{column}
-        \begin{column}{\onecolwid}\vspace{-.67in}
-            \vskip2ex
-            \input{edition}
-        \end{column}
-      \end{columns}
-      \vskip2.5ex
-      \begin{block}{}
-          \begin{figure}
-              \centering
-              \includegraphics[width=\textwidth]{images/iscore.png}
-              \caption{Un scénario d'exemple i-score}
-            \end{figure}
-      \end{block}
-  \end{column}
+    \begin{column}{\onecolwid}
+        \input{entites}
+    \end{column}
+    \begin{column}{\sepwid}\end{column}
+    \begin{column}{\onecolwid}
+        \input{edition}
+     \end{column}
   \begin{column}{\sepwid}\end{column}
   \begin{column}{\onecolwid}
     \vskip2ex

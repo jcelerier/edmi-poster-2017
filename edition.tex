@@ -1,8 +1,20 @@
 \begin{block}{Synchronisation des micro-structures}
+    Dans le cas d'une exécution partagée d'un scénario, il convient de définir la sémantique d'exécution des points de synchronisation, des conditions, et des vitesses de contraintes, en mode réparti. 
+   
+    C'est fait via deux caractéristiques:~\\
+    La \textbf{synchronisation}~:
 	\begin{itemize}
-		\item Mode synchrone
-		\item Mode asynchrone
+		\item \textbf{Mode synchrone}~: on respecte la sémantique d'exécution de i-score au prix d'une latence de synchronisation.
+		\item \textbf{Mode asynchrone}~: on ne respecte pas la sémantique avant-après d'i-score~: la fin de l'exécution d'un objet peut survenir quelques millisecondes après le début de l'exécution de l'objet suivant.
 	\end{itemize}
+
+Le \textbf{délai de propagation}~:
+\begin{itemize}
+    \item \textbf{Propagation instantanée}~: dès qu'une information est disponible dans le système, les clients qui en dépendent en sont informés et peuvent y réagir immédiatement. 
+    \item \textbf{Propagation compensée}~: quand une information est disponible dans le système, on estime la date minimale à partir de laquelle tous les clients peuvent être informés en fonction de la latence entre machines. Elles reçoivent toutes un ordre qu'elles sont sensées exécuter à cette date. C'est utile si on désire par exemple une bonne synchronisation entre vidéos.
+\end{itemize}
+
+Via des annotations, le compositeur peut définir le type de répartition qu'il souhaite sur chaque objet.
 \end{block}
 \begin{block}{Expressions et consensus}
 \end{block}
