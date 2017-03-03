@@ -1,5 +1,5 @@
 \begin{block}{Répartition des macro-structures}
-	Annotations de groupes sur les éléments de la partition interactive : 
+    L'auteur insère des annotations de groupes sur les éléments de la partition interactive : 
     
     \begin{figure}
         \begin{tikzpicture}[scale=4]
@@ -8,24 +8,24 @@
         \caption{Les annotations $G_{1..5}$ s'appliquent récursivement sur les contenus}
     \end{figure}
 
-	Trois modes d'exécution : 
+    On introduit trois modes d'exécution s'appliquant à un niveau hiérarchique donné~:
 	\begin{itemize}
 		\item \textbf{Exécution indépendante}~: chaque client du groupe exécute le scénario à son rythme ; les clients des autres groupes ne l'exécutent pas.
-		\item \textbf{Partage complet}~: toutes les machines partagent la même ligne temporelle récursivement ; chacune exécute les contenus propres à son groupe (fig.~\ref{fig.reparti}).
+		\item \textbf{Partage complet}~: tous les clients partagent la même ligne temporelle récursivement ; chacune exécute les contenus propres à son groupe (fig.~\ref{fig.reparti}).
 		\item \textbf{Partage mixte}~: certaines branches peuvent être exécutées par certains clients et pas par d'autres ; des resynchronisations peuvent avoir lieu en des points donnés par le compositeur.
 	\end{itemize}
     
     \begin{figure} 
-    	\centering
-    	\begin{tikzpicture}[scale=4]
+        \centering
+        \begin{tikzpicture}[scale=4]
             \input{scores/hierarchy.tex}
         \end{tikzpicture}
-        \caption{Une exécution répartie hiérarchique n'est possible qu'en cas de partage complet~: sinon impossible d'assurer la cohérence entre machines.}
+        \caption{Une exécution répartie hiérarchique n'est possible qu'en cas de partage complet~: sinon il est impossible d'assurer la cohérence entre machines.}
         \label{fig.reparti}
     \end{figure}
     
     \begin{figure}
         \includegraphics[scale=0.5]{images/quarre.jpg}
-        \caption{Quarrè (Pierre Cochard, SCRIME, 2017) : une installation en son spatialisé avec plusieurs téléphones.}
+        \caption{Quarrè (Pierre Cochard, SCRIME, 2016) : une installation en son spatialisé avec plusieurs téléphones. La répartition est réalisée manuellement.}
     \end{figure}
 \end{block}
