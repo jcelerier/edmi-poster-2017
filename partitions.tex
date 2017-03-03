@@ -12,12 +12,18 @@
 \end{tikzpicture}
 \caption{Syntaxe d'une partition interactive}
 \end{figure}
-Possibilités d'écritures forment un langage de programmation structuré axé sur l'organisation temporelle. 
-\textbf{Boucles} et \textbf{hiérarchie}, calcul instantané ou temporel possible via \textbf{Javascript}.
+Un langage de programmation structuré et visuel, axé sur l'organisation temporelle~: 
+\begin{itemize}
+    \item \textbf{Boucles} et \textbf{hiérarchie}.
+    \item Calcul instantané ou temporel via \textbf{Javascript}.
+\end{itemize}
+
 Applications : musique interactive, scénographie et spectacle vivant, contrôle de robots.
 
-Répartition bas-niveau fait déjà partie du formalisme : envoi de messages entre applications, synchronisation, etc.
+Le formalisme propose déjà une répartition bas-niveau.
+On souhaite rajouter une couche d'écriture permettant de la spécifier explicitement.
 \end{block}
+
 \begin{block}{Applications visées}
     \begin{itemize}
         \item \textbf{Murs d'écrans} vidéo.
@@ -25,6 +31,17 @@ Répartition bas-niveau fait déjà partie du formalisme : envoi de messages ent
         par exemple permettre d'utiliser la présence de \textbf{plusieurs appareils mobiles} 
         lors de l'écriture.
         \item \textbf{Back-up} à chaud des régies de spectacle.
-        \item Réduction de gigue sur périphériques embarqué.
+        \item Réduction de gigue sur périphériques embarqués.
     \end{itemize}
+\end{block}
+
+\begin{block}{Existant}
+\begin{itemize}
+    \item \textbf{Modélisation algorithmique} : réseaux de Petri pour synchronisation. 
+    \item \textbf{Horloges} : physiques (NTP\cite{mills1991internet}, PTP\cite{peng2009research}), logiques (Lamport\cite{lamport1978time}, vector, matrix) et hybrides\cite{kulkarni2014logical}.
+    Approches par intervalles plutôt que par dates : Google TrueTime.
+    Horloges adaptées à la gestion du temps musical : Ableton Link, Global Metronome\cite{oda2016global}.
+    \item 
+    \textbf{Applications musicales réparties} : Ohm Studio, Splice, Supercollider\cite{carot2007networked}.
+\end{itemize}
 \end{block}
