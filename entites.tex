@@ -8,27 +8,21 @@
         \end{tikzpicture}
         \caption{Les annotations $G_{1..5}$ s'appliquent récursivement sur les contenus}
     \end{figure}
+
 	Trois modes d'exécution : 
 	\begin{itemize}
-		\item \textbf{Exécution indépendante}~:chaque client du groupe exécute le scénario à son rythme.
-		\item \textbf{Partage complet}~: toutes les machines partagent la même ligne temporelle.
-		\item \textbf{Partage mixte}~: certaines branches peuvent être exécutées par certains clients.
+		\item \textbf{Exécution indépendante}~: chaque client du groupe exécute le scénario à son rythme ; les clients des autres groupes ne l'exécutent pas.
+		\item \textbf{Partage complet}~: toutes les machines partagent la même ligne temporelle récursivement ; chacune exécute les contenus propres à son groupe (fig.~\ref{fig.reparti}).
+		\item \textbf{Partage mixte}~: certaines branches peuvent être exécutées par certains clients et pas par d'autres ; des resynchronisations peuvent avoir lieu en des points données par le compositeur.
 	\end{itemize}
     
-    \begin{figure} \hspace*{-11cm}
-        \begin{tabular}{L{3.5em}R{0.3\textwidth}}
-            Racine: & \begin{tikzpicture}[scale=3.5]
+    \begin{figure} 
+    	\centering
+    	\begin{tikzpicture}[scale=4]
             \input{scores/hierarchy.tex}
-            \end{tikzpicture} \\
-            $S_1$: & \begin{tikzpicture}[scale=1.5, every node/.style={scale=0.8}]
-            \input{scores/hierar-sub.tex}
-            \end{tikzpicture} \\
-            $S_2$: & \begin{tikzpicture}[scale=2.5, every node/.style={scale=0.8}]
-            \input{scores/hierar-sub-2.tex}
-            \end{tikzpicture} \\
-        \end{tabular}
-        \caption{
-            Une exécution répartie hiérarchique n'est possible qu'en cas de partage complet~: sinon impossible d'assurer la cohérence entre machines.}
+        \end{tikzpicture}
+        \caption{Une exécution répartie hiérarchique n'est possible qu'en cas de partage complet~: sinon impossible d'assurer la cohérence entre machines.}
+        \label{fig.reparti}
     \end{figure}
     
 \end{block}
