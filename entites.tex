@@ -5,7 +5,7 @@
         \begin{tikzpicture}[scale=4]
         \input{scores/general.tex}
         \end{tikzpicture}
-        \caption{Les annotations $G_{1..5}$ s'appliquent récursivement sur les contenus}
+        \caption{Les annotations de groupes, $G_{1..5}$, s'appliquent récursivement sur les contenus}
     \end{figure}
 
     On introduit trois modes d'exécution s'appliquant à un niveau hiérarchique donné~:
@@ -20,7 +20,7 @@
         \begin{tikzpicture}[scale=4]
             \input{scores/hierarchy.tex}
         \end{tikzpicture}
-        \caption{Une exécution répartie hiérarchique n'est possible qu'en cas de partage complet~: sinon il est impossible d'assurer la cohérence entre machines.}
+        \caption{Une exécution répartie hiérarchique n'est possible qu'en cas de partage complet de la trame temporelle, pour tous les groupes, récursivement. Sinon, il est impossible d'assurer la cohérence entre machines.}
         \label{fig.reparti}
     \end{figure}
     
